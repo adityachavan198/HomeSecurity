@@ -1,0 +1,12 @@
+.loginform,.registerform{
+  text-align: center;
+}
+.bg{
+  /*width: 700px;
+  height: 300px;
+  align-content: center;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}

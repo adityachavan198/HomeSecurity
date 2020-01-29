@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>Welcome</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'library/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'library/css/vendor/bootstrap.min.css' %}">
+
+</head>
+<body>
+  <h2>Welcome to library management system </h2>
+  <hr>
+  <img src="{% static 'library/image/background.jpg'  %}" style="width: 100%; height: 500px;" class="bg">
+  <br>
+  <form class="registerform" action="{% url 'registerstudent' %}" method="post">
+    {% csrf_token %}
+    <p>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="" placeholder="username">
+      </div>
+    </p>
+    <p>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" value=""placeholder="password">
+      </div>
+    </p>
+    <p>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select class="" name="country">
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+          <option value="Austria">Austria</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <input type="submit" name="submit" value="register">
+        </p>
+      </div>
+    </p>
+
+  </form>
+
+
+
+</body>
+</html>
